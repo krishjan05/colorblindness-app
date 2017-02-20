@@ -52,8 +52,8 @@ angular.module('starter.controllers', ['nvd3'])
       var aKeys = Object.keys(oData.data.gtf);
       $scope.data = new Array();
       for(var n = 0; n < aKeys.length; n++){
-          if(oData.gtf[aKeys[n]].hasOwnProperty("total")){
-              $scope.data.push({"province":aKeys[n], "transfer":oData.gtf[aKeys[n]].total});
+          if(oData.data.gtf[aKeys[n]].hasOwnProperty("total")){
+              $scope.data.push({"province":aKeys[n], "transfer":oData.data.gtf[aKeys[n]].total});
           }
       }
 
